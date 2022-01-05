@@ -525,14 +525,14 @@ def game():
 
                     gameTimeT = timer(starttime)
                     print('\nYour total time is ' + str(gameTimeT))
-
+                    
+                    print()
+                    
                     gameTimeI = timer(levelTime)
                     print('Your time for this level is ' + str(gameTimeI))
 
                     currentLevel += 1
 
-                    score = 600 - gameTimeT
-                    print("Your score is " + str(score))
                     break
 
                 else:
@@ -615,7 +615,8 @@ def game():
             print(f'You now have {len(chips)} chip/s. ' + 'You need 7 chips to exit this map.')
 
             print("immunity:", end=" ")
-            print(immunity)
+            print(immunity, end= " ")
+            print("f: immunity to Fire(F); z: immunity to Water(W)")
 
         playAgain = gameReset()
 
